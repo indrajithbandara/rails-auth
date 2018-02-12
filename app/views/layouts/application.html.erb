@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<%= render 'includes/head' %>
+  </head>
+
+  <body>
+  	<%= render 'includes/main_navigation' %>
+  	<%= render 'includes/flash_messages' %>
+  	<main role="main" class="main container">
+    	<%= yield %>
+    </main>
+    <%= render 'includes/footer' %>
+  </body>
+</html>

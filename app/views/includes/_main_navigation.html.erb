@@ -1,0 +1,38 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+   <%= link_to "Rails auth", root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: 'nav-link' %>
+        </li>
+      <% unless user_signed_in? %>
+         <li class="nav-item">
+            <%= link_to "Register", new_user_registration_path, class: 'nav-link' %>
+         </li>
+         <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
+         </li>
+        <% else %>
+         <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.email %>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
+                <%= link_to "Account Settings", edit_user_registration_path, class: 'dropdown-item' %>
+              </div>
+            </li>
+         <li class="nav-item">
+           <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link' do %>
+            Sign Out
+           <% end %>
+         </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

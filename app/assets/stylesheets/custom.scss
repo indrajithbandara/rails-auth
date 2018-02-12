@@ -1,0 +1,67 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 54px;
+}
+
+/*flash*/
+.alert-error {
+    background-color: red;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: green;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: green;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+ .edit-user {
+    margin-bottom: 100px;
+ }
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #212529;
+}
+
+ .main {
+    margin-top: 50px;
+}
+
+ @media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
